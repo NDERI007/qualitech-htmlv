@@ -1,0 +1,15 @@
+body {
+    font-family: Raleway, sans-serif;
+}
+
+nav>ul>li {
+    padding-right: 15px;
+}
+
+i {
+    white-space: pre;
+}
+
+.heading {
+    margin-left: 1%;
+}
