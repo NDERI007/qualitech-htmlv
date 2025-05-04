@@ -13,3 +13,50 @@ i {
 .heading {
     margin-left: 1%;
 }
+
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    display: inline;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.btncon {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    width: 100%;
+    margin-top: 400px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.titles {
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+h4 {
+    font-size: 2.675rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sec-section {
+    margin: 2%;
+}
+
+.card {
+    min-width: 15vw;
+    min-height: 70px;
+    padding: 1.6vw;
+    border: 1px solid #B4B4B4;
+}
