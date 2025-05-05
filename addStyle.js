@@ -21,7 +21,7 @@ fscetion.classList.add(
 
 const viewbtn = document.querySelector(".viewbtn");
 viewbtn.classList.add(
-  ..."w-auto h-auto min-w-[137px] min-h-[30px] ml-5 p-5 border-2 border-slate-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 cursor-pointer".split(
+  ..."w-auto h-auto min-w-[137px] min-h-[30px] ml-5 p-5 border-2 border-slate-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-sky-500 cursor-pointer".split(
     " "
   )
 );
@@ -34,4 +34,11 @@ Schedule.classList.add(
 );
 
 const jsec = document.querySelector(".card-holder");
-jsec.classList.add(..."grid grid-cols-4 gap-3".split(" "));
+jsec.classList.add(..."grid grid-cols-4 gap-5".split(" "));
+
+const story = document.querySelector(".first-story");
+story.classList.add(
+  ..."bg-linear-270 from-green-700 to-emerald-500 max-w-[25vw] min-h-[30px]".split(
+    " "
+  )
+);
