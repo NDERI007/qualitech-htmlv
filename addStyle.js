@@ -1,7 +1,9 @@
 const bdy = document.querySelector("body");
 bdy.classList.add(..."w-screen h-screen m-0 flex items-center".split(" "));
 const navbar = document.querySelector("nav");
-navbar.classList.add(..."flex items-center justify-end w-1/2 h-40".split(" "));
+navbar.classList.add(
+  ..."flex items-center justify-end w-1/2 h-40 pr-5".split(" ")
+);
 
 const header = document.querySelector(".header");
 header.classList.add(
@@ -38,7 +40,9 @@ jsec.classList.add(..."grid grid-cols-4 gap-5".split(" "));
 
 const story = document.querySelector(".first-story");
 story.classList.add(
-  ..."bg-linear-270 from-green-700 to-emerald-500 max-w-[25vw] min-h-[30px]".split(
+  ..."bg-linear-270 from-green-700 to-emerald-500 max-w-[25vw] min-h-[30px] cursor-pointer rounded-sm".split(
     " "
   )
 );
+
+const hidenav = document.querySelector("hideOnMobile");
