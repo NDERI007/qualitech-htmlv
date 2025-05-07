@@ -38,11 +38,85 @@ Schedule.classList.add(
 const jsec = document.querySelector(".card-holder");
 jsec.classList.add(..."grid grid-cols-4 gap-5".split(" "));
 
-const story = document.querySelector(".first-story");
+const story = document.querySelector(".story");
 story.classList.add(
   ..."bg-linear-270 from-green-700 to-emerald-500 max-w-[25vw] min-h-[30px] cursor-pointer rounded-sm".split(
     " "
   )
 );
 
-const hidenav = document.querySelector("hideOnMobile");
+function ShowSidebar() {
+  navbar.style.display = "flex";
+}
+
+const study = [
+  {
+    id: 1,
+    title: "Livestock Health Monitoring",
+    client: "AMS EastAfrica",
+    brief:
+      "Implemented a comprehensive web and mobile solution for real-time monitoring of livestock.",
+    stats: [
+      { label: "Health Monitoring Accuracy", value: "98.5%" },
+      { label: "Time Saved", value: "65%" },
+      { label: "Operational Efficiency", value: "85%" },
+    ],
+    tags: ["IoT", "Software", "Agriculture"],
+    impact: [
+      "Reduced livestock mortality by 40%",
+      "Increased milk production by 20%",
+      "Improved farmer satisfaction by 90%",
+    ],
+  },
+  {
+    id: 2,
+    title: "Community Forum",
+    client: "GAiF",
+    brief:
+      "Developed a fully fledged community forum platform connecting people across Africa",
+    stats: [
+      { label: "User Satisfaction", value: "90%" },
+      { label: "Community Growth", value: "120%" },
+      { label: "Engagement Rate", value: "75%" },
+    ],
+    tags: ["Generative AI", "Software", "Community"],
+    impact: [
+      "Increased user satisfaction by 40%",
+      "Grew community membership by 120%",
+      "Boosted user engagement by 75%",
+    ],
+  },
+];
+
+function createStudyElement(element, content, className) {
+  const Element = document.createElement(element);
+  Element.textContent = content;
+  Element.setAttribute("class", className);
+  return Element;
+}
+
+function addElement(study, Index) {
+  const studyItem = document.createElement("div");
+  studyItem.setAttribute("id", Index);
+  studyItem.setAttribute("key", Index);
+  studyItem.setAttribute("class", "study-card");
+  studyItem.appendChild(createStudyElement("p", `${study.tags}`, "study-tags"));
+  studyItem.appendChild(
+    createStudyElement("p", `${study.brief}`, "study-brief")
+  );
+  studyItem.appendChild(
+    createStudyElement("p", `${study.stats}`, "study-stats")
+  );
+  studyItem.appendChild(
+    createStudyElement("p", `${study.impact}`, "study-tags")
+  );
+
+  story.insertAdjacentElement("afterend", studyItem);
+}
+
+story.addEventListener("click", (e) => {
+  Object.entries(study[0]).map(([study, index]) => {
+    return `${study} : ${index.toUpperCase()}`;
+    //addElement(study, index);
+  });
+});
